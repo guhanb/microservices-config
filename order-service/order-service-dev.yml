@@ -1,8 +1,9 @@
 spring:
     datasource:
-      url: jdbc:postgresql://${ORDER_DB_HOST}:${ORDER_DB_PORT:5432}/orderdb
-      username: ${ORDER_DB_USERNAME}
+      url: jdbc:postgresql://${ORDER_DB_HOST:localhost}:${ORDER_DB_PORT:5433}/orderdb
+      username: ${ORDER_DB_USERNAME:postgres}
       password: ${ORDER_DB_PASSWORD}
+
     jpa:
       database: POSTGRESQL
       show-sql: false
@@ -10,5 +11,5 @@ spring:
         ddl-auto: validate
       database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-  server:
+server:
     port: 8083
