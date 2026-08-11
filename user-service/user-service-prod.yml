@@ -10,5 +10,5 @@ spring:
         ddl-auto: validate
       database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-  server:
+server:
     port: 8082
