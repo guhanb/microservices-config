@@ -1,15 +1,14 @@
 spring:
-    datasource:
-      url: jdbc:postgresql://${ORDER_DB_HOST:localhost}:${ORDER_DB_PORT:5433}/orderdb
-      username: ${ORDER_DB_USERNAME:postgres}
-      password: ${ORDER_DB_PASSWORD}
-
-    jpa:
-      database: POSTGRESQL
-      show-sql: false
-      hibernate:
-        ddl-auto: validate
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderdb
+    username: postgres
+    password: ${ORDER_DB_PASSWORD}
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-    port: 8083
+  port: 8083

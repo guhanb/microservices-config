@@ -1,7 +1,7 @@
 spring:
     datasource:
-      url: jdbc:postgresql://${ORDER_DB_HOST}:${ORDER_DB_PORT:5432}/orderdb
-      username: ${ORDER_DB_USERNAME}
+      url: jdbc:postgresql://localhost:5432/orderdb
+      username: postgres
       password: ${ORDER_DB_PASSWORD}
     jpa:
       database: POSTGRESQL
